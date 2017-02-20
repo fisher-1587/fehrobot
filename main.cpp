@@ -16,7 +16,7 @@ void readLightValues()
     float x, y;
     while(!LCD.Touch(&x, &y))
     {
-        char telemetryTitle[][13] = {"Battery", "CdS Cell", "Left Opto", "Mid Opto", "Right Opto"};
+        char telemetryTitle[][TELEMETRY_TEXT_LENGTH] = {"Battery", "CdS Cell", "Left Opto", "Mid Opto", "Right Opto"};
         float telemetryData[] = {Battery.Voltage(), cdsCell.Value(), leftSensor.Value(), middleSensor.Value(), rightSensor.Value()};
         displayTelemetry(telemetryTitle, telemetryData, sizeof(telemetryData)/sizeof(telemetryData[0]));
     }
@@ -28,7 +28,7 @@ void readButtonValues()
     float x, y;
     while(!LCD.Touch(&x, &y))
     {
-        char telemetryTitle[][13] = {"Battery", "Left Front", "Right Front", "Left Back", "Right Back"};
+        char telemetryTitle[][TELEMETRY_TEXT_LENGTH] = {"Battery", "Left Front", "Right Front", "Left Back", "Right Back"};
         float telemetryData[] = {Battery.Voltage(), leftFrontButton.Value(), rightFrontButton.Value(), leftBackButton.Value(), rightBackButton.Value()};
         displayTelemetry(telemetryTitle, telemetryData, sizeof(telemetryData)/sizeof(telemetryData[0]));
     }
@@ -40,7 +40,7 @@ void readEncoderValues()
     float x, y;
     while(!LCD.Touch(&x, &y))
     {
-        char telemetryTitle[][13] = {"Battery", "Left Enc", "Right Enc"};
+        char telemetryTitle[][TELEMETRY_TEXT_LENGTH] = {"Battery", "Left Enc", "Right Enc"};
         float telemetryData[] = {Battery.Voltage(), leftEncoder.Counts(), rightEncoder.Counts()};
         displayTelemetry(telemetryTitle, telemetryData, sizeof(telemetryData)/sizeof(telemetryData[0]));
     }
