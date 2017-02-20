@@ -10,7 +10,7 @@
 #include <overhead.h>
 #include <drive.h>
 
-void readLightValues()
+void readLightValues()	//Display light values
 {
     LCD.Clear();
     float x, y;
