@@ -50,14 +50,15 @@ int main(void)
 {
     LCD.Clear();
     waitForConfirmation();
-    waitForStart();
-    driveUntilLine(1.7, 1.7, 1.7, 15, true);
-    followUntilBumped(1.7, 1.7, 1.7, 20, true);
-    driveTime(1000, -15);
-    followUntilBumped(1.7, 1.7, 1.7, 15, true);
-    driveInches(-3, 25, 15);
-    turnToAngle(90, 30);
-    driveUntilCDS(10);
+	driveTime(1000, 100);
+    //waitForStart();
+    //driveUntilLine(1.7, 1.7, 1.7, 15, true);
+    //followUntilBumped(1.7, 1.7, 1.7, 20, true);
+    //driveTime(1000, -15);
+    //followUntilBumped(1.7, 1.7, 1.7, 15, true);
+    //driveInches(-3, 25, 15);
+    //turnToAngle(90, 30);
+    //driveUntilCDS(10);
 
     //dispOptoValues();
     //driveInchesPowerRamp(12, 50, 15);
